@@ -1,0 +1,646 @@
+@font-face {
+  font-family: 'warsaw_gothicregular';
+  src: url('../fonts/warsawgothic-webfont.eot');
+  src: url('../fonts/warsawgothic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/warsawgothic-webfont.woff2') format('woff2'),
+       url('../fonts/warsawgothic-webfont.woff') format('woff'),
+       url('../fonts/warsawgothic-webfont.ttf') format('truetype'),
+       url('../fonts/warsawgothic-webfont.svg#warsaw_gothicregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cicero_serifserif';
+  src: url('../fonts/ciceroserif-webfont.eot');
+  src: url('../fonts/ciceroserif-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ciceroserif-webfont.woff2') format('woff2'),
+       url('../fonts/ciceroserif-webfont.woff') format('woff'),
+       url('../fonts/ciceroserif-webfont.ttf') format('truetype'),
+       url('../fonts/ciceroserif-webfont.svg#cicero_serifserif') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+body {
+  background: #F1F1F1;
+  margin: 0;
+}
+
+/******************************************
+ ************* HEADER *********************
+ ******************************************/
+
+header {
+  margin: 1em 0;
+}
+
+#back_bar {
+  position: absolute;
+  width: 100%;
+  height: 180px;
+}
+
+#back_circle {
+  position: static;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+}
+
+#back_circle > div {
+  margin-left: 3.5%;
+  width: 180px;
+  height: 100%;
+  border: 3px solid #E0E0E0;
+  border-radius: 50%;
+}
+
+#strip {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: 50%;
+  border-top: 3px solid #E0E0E0;
+  border-bottom: 3px solid #E0E0E0;
+  background: white;
+}
+
+#header_wrapper {
+  width: 100%;
+  max-width: 1280px; 
+  margin: 0 auto;
+}
+
+#real_header {
+  position: relative;
+  width: 93%;
+  display: table;
+  margin: 0 3.5%;
+  text-align: center;
+}
+
+header h2, #real_header h4 {
+  margin: 0;
+}
+
+#real_header > div {
+  display: table-row;
+}
+
+#real_header > div > * {
+  display: table-cell;
+  text-align: center;
+}
+
+#real_header h4 {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #C9C9C9;
+  margin: 0 1px;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+
+#real_header #logo {
+  width: 65%;
+  text-align: left;
+  font-size: 0pt;
+  
+}
+
+#logo > img {
+  font-size: 12pt;
+  width: 174px;
+  height: 174px;
+  margin: 3px;
+  background: white;
+  padding: 0.5em;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+#name {
+  position: relative;
+  font-size: 22pt;
+  display: inline-block;
+  font-family: 'cicero_serifserif';
+  vertical-align: -0.4em;
+  color: #696A6E;
+}
+
+#name span {
+  color: #A9AAAE;
+}
+
+#real_header #porfolio1, #real_header #services1 {
+  display: none;
+}
+
+/******************************************
+ ************* CONTENT ********************
+ ******************************************/
+ 
+#content {
+  max-width: 1280px;
+  margin: auto;
+}
+
+#content h1, #content h2, #content h3, #content h4 {
+  font-family: 'warsaw_gothicregular';
+  font-weight: lighter;
+}
+
+#content > h1 {
+  text-align: center;
+  font-size: 70pt;
+  margin: 0.3em 0;
+  color: #3A444D;
+}
+
+#and_title {
+  font-size: 40pt;
+  vertical-align: 0.2em;
+}
+
+.spaceBreak {
+  display: none;
+}
+
+#content > h2 {
+  text-align: center;
+  font-size: 40pt;
+  margin: 0.6em 0 1em;
+  color: #3A444D;
+}
+
+#features {
+  margin: 3.5em 0;
+  text-align: center;
+  font-size: 0;
+}
+
+#features > div {
+  display: inline-table;
+  width: 33%;
+}
+
+#features > div > div {
+  display: table-cell;
+}
+
+.featureCircle {
+  display: inline-block;
+  height: 155px;
+  width: 155px;
+  border: 7px solid white;
+  border-radius: 50%;
+}
+
+.featureCircle > h3 {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: 0;
+  font-size: 35pt;
+  color: white;
+}
+
+#design {
+  background: #E25B52;
+}
+
+#develop {
+  background: #EFAE2F;
+}
+
+#support {
+  background: #9AB775;
+}
+
+#host {
+  background: #69BBB2;
+}
+
+#main_content {
+  margin: 8.5em 0.5% 0;
+}
+
+#gallery {
+  font-family: sans-serif;
+  float: left;
+  width: 66.66%;
+}
+
+#gallery > div {
+  font-size: 0;
+}
+
+#gallery > div > div {
+  display: inline-block;
+  font-size: 14pt;
+  width: 50%;
+}
+
+.sectTitle {
+  font-family: sans-serif;
+  font-size: 10pt;
+  color: #D1D1D1;
+  margin: 1em 3em;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  margin: 1.8em 9%;
+}
+
+.project > img {
+  width: 100%;
+  max-height: 210px;
+  border: 10px solid white;
+  border-radius: 5px;
+}
+
+.ribbon {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  background: #F5A72B;
+  font-size: 9pt;
+  text-align: center;
+  padding: 0.6em;
+  width: 50%;
+  right: 6%;
+  top: 7.5%;
+  transform: translate(50%, -50%) rotate(45deg);
+}
+
+#cool_work {
+  background: #7FC6C1;
+}
+
+.projectTitle {
+  display: table;
+  margin: 0.2em 0;
+  width: 100%;
+}
+
+.projectTitle > * {
+  display: table-cell;
+}
+
+.projectTitle > h5 {
+  color: #AEBAC5;
+  vertical-align: top;
+  width: 60%;
+}
+
+.projectTitle > div > div {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.redPoint {
+  background: radial-gradient(#B57567, #D4A6A1);
+}
+
+.yellowPoint {
+  background: radial-gradient(#C49750, #D9B073);
+}
+
+.greenPoint {
+  background: radial-gradient(#A1B48A, #C3D0B5);
+}
+
+.cyanPoint {
+  background: radial-gradient(#75AFAA, #9BC5C1);
+}
+
+.disablePoint {
+  background: radial-gradient(#D7D7D7, #E9E8EB);
+}
+
+#articles {
+  float: right;
+  width: 33.33%;
+}
+
+#articles > div {
+  margin: 4em 10%;
+}
+
+#articles > div > div {
+  margin: 2.6em 0;
+}
+
+.article {
+  color: #3A444D;
+  font-size: 0;
+}
+
+.article > h4 {
+  display: inline-block;
+  width: calc(100% - 70px);
+  font-size: 27pt;
+  line-height: 1em;
+  vertical-align: top;
+  margin: 0;
+  padding: 0 0.3em;
+}
+
+.article > img {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 5px solid white;
+}
+
+#quote {
+  margin: 3.7em 0;
+  color: #B8B9BD;
+}
+
+#quote > img {
+  width: 35px;
+  height: 30px;
+}
+
+#quote > p {
+  margin: 0.7em 0;
+}
+
+#quote h6 {
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+#about_me {
+  margin: 0;
+  display: inline-block;
+  vertical-align: 50%;
+}
+
+#my_name {
+  margin: 2em 0;
+  text-align: right;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+}
+
+/******************************************
+ ************* MEDIA **********************
+ ******************************************/
+ 
+@media screen and (max-width: 800px) {
+  
+  /******************************************
+   ************* HEADER *********************
+   ******************************************/
+  
+  #back_bar {
+    height: 145px;
+  }
+  
+  #back_circle > div {
+    margin: 0 auto;
+    width: 145px;
+  }
+  
+  #real_header {
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
+  }
+  
+  #real_header > div > * {
+    font-size: 10pt;
+  }
+  
+  #real_header #porfolio1, #real_header #services1 {
+    display: table-cell;
+  }
+  
+  #real_header #porfolio2, #real_header #services2 {
+    display: none;
+  }
+  
+  #real_header #logo {
+    width: 145px;
+  }
+  
+  #logo > img {
+    width: 139px;
+    height: 139px;
+  }
+  
+  #name {
+    font-size: 20pt;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  /******************************************
+   ************* CONTENT ********************
+   ******************************************/
+  
+  #content > h1 {
+    margin: 0.5em 0 0;
+    font-size: 58pt;
+  }
+  
+  #and_title {
+    font-size: 36pt;
+    vertical-align: 0.25em;
+  }
+  
+  #content > h2 {
+    font-size: 35pt;
+    margin: 0.4em 0 0.9em;
+  }
+  
+  .featureCircle {
+    width: 135px;
+    height: 135px;
+    border: 5px solid white;
+  }
+  
+  .featureCircle > h3 {
+    font-size: 28pt;
+  }
+  
+  #main_content {
+    margin: 2.8em 4.5% 0;
+    overflow: auto;
+  }
+
+  #gallery {
+    float: none;
+    width: auto;
+  }
+  
+  #articles {
+    float: none;
+    width: auto;
+  }
+  
+  .sectTitle {
+    margin: 1.5em;
+    text-align: center;
+    font-size: 8pt;
+  }
+  
+  .project {
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+  }
+  
+  .project > img {
+    max-height: 173px;
+    border: 7px solid white;
+  }
+  
+  .ribbon {
+    font-size: 7pt;
+  }
+  
+  .projectTitle > h5 {
+    font-size: 10pt;
+  }
+  
+  #articles > div {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  
+  /******************************************
+   ************* HEADER *********************
+   ******************************************/
+  
+  #back_bar {
+    height: 180px;
+  }
+  
+  #back_circle > div {
+    width: 180px;
+  }
+  
+  #real_header #porfolio1, #real_header #services1 {
+    display: none;
+  }
+  
+  #real_header #porfolio2, #real_header #services2, #real_header #contact, #real_header #about {
+    display: inline-block;
+    margin: 0 1%;
+  }
+  
+  #real_header #logo {
+    width: auto;
+    text-align: center;
+    display: block;
+  }
+  
+  #logo > img {
+    width: 174px;
+    height: 174px;
+  }
+  
+  #name {
+    font-size: 24pt;
+    display: block;
+    margin-bottom: 0.7em;
+  }
+  
+  /******************************************
+   ************* CONTENT ********************
+   ******************************************/
+  
+  #content > h1 {
+    margin: 0.65em 0 0;
+    font-size: 55pt;
+  }
+  
+  .spaceBreak {
+    display: inline;
+  }
+  
+  .spaceNoBreak {
+    display: none;
+  }
+  
+  #content > h2 {
+    font-size: 32pt;
+    margin: 0.4em 0 1em;
+  }
+  
+  #features > div {
+    width: 100%;
+  }
+
+  #features > div > div {
+    display: inline-block;
+    font-size: 14pt;
+    margin: 0.5em 2%;
+  }
+  
+  .featureCircle {
+    height: 155px;
+    width: 155px;
+    border: 7px solid white;
+  }
+  
+  .featureCircle > h3 {
+    font-size: 33pt;
+  }
+  
+  #main_content {
+    margin-top: 7.5em;
+  }
+  
+  #gallery > div > div {
+    width: 100%;
+  }
+  
+  .sectTitle {
+    font-size: 9pt;
+    margin: 1.8em;
+  }
+  
+  .project {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .project > img {
+    max-height: 208px;
+    border: 10px solid white;
+  }
+  
+  .ribbon {
+    font-size: 9pt;
+  }
+  
+  .projectTitle {
+    margin: 0.5em 0;
+  }
+  
+  #articles > div {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
