@@ -1,3 +1,4 @@
+//list of HTML lists to return. Describe the Director(s)/Length/ESRB rating
 let ralphMovie = '<ul><li>Director: Phil Jonston, Rich Moore</li><li>Length: 1h52min</li><li>ESRB: PG</li></ul>';
 let creedMovie = '<ul><li>Director: Steven Caple Jr.</li><li>Length: 2h10min</li><li>ESRB: PG-13</li></ul>';
 let beastsMovie = '<ul><li>Director: David Yates</li><li>Length: 2h14min</li><li>ESRB: PG-13</li></ul>';
@@ -9,6 +10,7 @@ let familyMovie = '<ul><li>Director: Sean Anders</li><li>Length: 1h58min</li><li
 let bohemianMovie = '<ul><li>Director: Bryan Singer</li><li>Length: 2h14min</li><li>ESRB: PG-13</li></ul>';
 let starMovie = '<ul><li>Director: Bradley Cooper</li><li>Length: 2h16min</li><li>ESRB: R</li></ul>';
 
+//list of JSON objects to return. Object describes a movie. Parameters include Title/Image/Rating/Genre(tag)
 let ralphObj = {title: "Ralph Breaks the Internet", image: "https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_UX182_CR0,0,182,268_AL_.jpg", rating: 3.9, tag: "Animation"};  
 let creedObj = {title: "Creed II", image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Creed_II_poster.png/220px-Creed_II_poster.png", rating: 4, tag: "Drama"};
 let beastsObj = {title: "Fantastic Beasts: The Crimes of Grindelwald", image: "http://digitalspyuk.cdnds.net/18/39/480x711/gallery-1537826028-fantastic-beasts-2-gellert-grindelwald.jpg", rating: 3.5, tag: "Adventure"};
@@ -20,15 +22,14 @@ let familyObj = {title: "Instant Family", image: "http://www.impawards.com/2018/
 let bohemianObj = {title: "Bohemian Rhapsody", image: "https://m.media-amazon.com/images/M/MV5BNDg2NjIxMDUyNF5BMl5BanBnXkFtZTgwMzEzNTE1NTM@._V1_UX182_CR0,0,182,268_AL_.jpg", rating: 4.2, tag: "Drama"};
 let starObj = {title: "A Star is Born", image: "https://m.media-amazon.com/images/M/MV5BMjE3MDQ0MTA3M15BMl5BanBnXkFtZTgwMDMwNDY2NTM@._V1_.jpg", rating: 4.1, tag: "Romance"};
 
-//list of JSON actor list, doesn't matter if they are not the same size.
-//ex: 
-let ralphCast = [];
-let creedCast = [];
-let beastsCast = [];
-let robinCast = [];
-let grinchCast = [];
+//list of JSON lists to return. Describe the main 3 actors in the movie, as described on IMDB.
+let ralphCast = ['John C. Reilly', 'Sarah Silverman', 'Gal Gadot'];
+let creedCast = ['Michael B. Jordan', 'Sylvester Stallone', 'Tessa Thompson'];
+let beastsCast = ['Eddie Redmayne', 'Katherine Waterston', 'Dan Fogler'];
+let robinCast = ['Taron Egerton','Jamie Foxx','Ben Mendelsohn'];
+let grinchCast = ['Benedict Cumberbatch','Cameron Seely','Rashida Jones'];
 let bookCast = ['Viggo Mortensen', 'Mahershala Ali', 'Linda Cardellini'];
-let widowsCast = [];
-let familyCast = [];
+let widowsCast = ['Viola Davis', 'Michelle Rodriguez', 'Elizabeth Debicki'];
+let familyCast = ['Mark Wahlberg', 'Rose Byrne', 'Isabela Moner'];
 let bohemianCast = ['Rami Malek', 'Lucy Boynton', 'Gwilym Lee'];
 let starCast = ['Lady Gaga', 'Bradley Cooper', 'Sam Elliot'];
