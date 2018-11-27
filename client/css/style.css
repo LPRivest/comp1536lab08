@@ -27,7 +27,10 @@ body * {
 }
 
 body {
-  background: #F1F1F1;
+  background: url('https://m.media-amazon.com/images/G/01/IMDb/design/a/2018/ptp/00444678-ralph-breaks-the-internet-ca/main-wrap._V480430856_.jpg'), #013648;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
   margin: 0;
 }
 
@@ -57,7 +60,10 @@ header {
   margin-left: 3.5%;
   width: 180px;
   height: 100%;
-  border: 3px solid #E0E0E0;
+  border-top: 3px solid #ffa3a7;
+  border-bottom: 3px solid #bc0006;
+  border-left: 3px solid #f50007;
+  border-right: 3px solid #f50007;
   border-radius: 50%;
 }
 
@@ -67,9 +73,9 @@ header {
   transform: translate(0, -50%);
   width: 100%;
   height: 50%;
-  border-top: 3px solid #E0E0E0;
-  border-bottom: 3px solid #E0E0E0;
-  background: white;
+  border-top: 3px solid #ffa3a7;
+  border-bottom: 3px solid #bc0006;
+  background: linear-gradient(45deg, #ff656a, #f50007);
 }
 
 #header_wrapper {
@@ -101,18 +107,19 @@ header h2, #real_header h4 {
 
 #real_header h4 {
   font-family: sans-serif;
-  font-weight: bold;
-  color: #C9C9C9;
+  font-weight: 900;
+  color: white;
   margin: 0 1px;
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
+  font-size: 10pt;
 }
 
 #real_header #logo {
   width: 65%;
+  border-radius: 50%;
   text-align: left;
   font-size: 0pt;
-  
 }
 
 #logo > img {
@@ -120,7 +127,7 @@ header h2, #real_header h4 {
   width: 174px;
   height: 174px;
   margin: 3px;
-  background: white;
+  background: linear-gradient(45deg, #fe5b60, #fd5359);
   padding: 0.5em;
   border-radius: 50%;
   vertical-align: middle;
@@ -132,11 +139,7 @@ header h2, #real_header h4 {
   display: inline-block;
   font-family: 'cicero_serifserif';
   vertical-align: -0.4em;
-  color: #696A6E;
-}
-
-#name span {
-  color: #A9AAAE;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #real_header #porfolio1, #real_header #services1 {
@@ -161,7 +164,7 @@ header h2, #real_header h4 {
   text-align: center;
   font-size: 70pt;
   margin: 0.3em 0;
-  color: #3A444D;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #and_title {
@@ -177,7 +180,7 @@ header h2, #real_header h4 {
   text-align: center;
   font-size: 40pt;
   margin: 0.6em 0 1em;
-  color: #3A444D;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 #features {
@@ -195,7 +198,7 @@ header h2, #real_header h4 {
   display: table-cell;
 }
 
-.featureCircle {
+/*.featureCircle {
   display: inline-block;
   height: 155px;
   width: 155px;
@@ -226,10 +229,10 @@ header h2, #real_header h4 {
 
 #host {
   background: #69BBB2;
-}
+}*/
 
 #main_content {
-  margin: 8.5em 0.5% 0;
+  margin: 3em 0.5% 0;
 }
 
 #gallery {
@@ -251,7 +254,7 @@ header h2, #real_header h4 {
 .sectTitle {
   font-family: sans-serif;
   font-size: 10pt;
-  color: #D1D1D1;
+  color: white;
   margin: 1em 3em;
 }
 
@@ -259,14 +262,35 @@ header h2, #real_header h4 {
   position: relative;
   overflow: hidden;
   margin: 1.8em 9%;
+  color: #54e4f3;
+  background: #031b33;
+  border-radius: 10pt;
 }
 
 .project > img {
   width: 100%;
   height: 450px;
   object-fit: cover;
-  border: 10px solid white;
-  border-radius: 5px;
+  border-bottom: 1px solid white;
+}
+
+.project > ul > li {
+  list-style-image: url('../images/play.svg');
+}
+
+.project > p {
+  margin: 1em;
+}
+
+.project > p > span {
+  font-family: monospace;
+  display: inline-block;
+  background: #0091EA;
+  padding: 0.3em 0.5em;
+  border-radius: 0.5em;
+  color: white;
+  margin: 0.1em 0;
+  font-size: 10pt;
 }
 
 .ribbon {
@@ -290,7 +314,8 @@ header h2, #real_header h4 {
 .projectTitle {
   display: table;
   margin: 0.2em 0;
-  width: 100%;  
+  padding: 0 1em;
+  width: 100%;
 }
 
 .projectTitle > * {
@@ -302,6 +327,7 @@ header h2, #real_header h4 {
   vertical-align: top;
   width: 60%;
   font-size: 20pt;
+  color: #3aa2ed;
 }
 
 .projectTitle > div > div {
@@ -326,7 +352,7 @@ header h2, #real_header h4 {
 }
 
 .article {
-  color: #3A444D;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0;
 }
 
@@ -344,7 +370,7 @@ header h2, #real_header h4 {
   display: inline-block;
   width: 70px;
   height: 70px;
-  border: 5px solid white;
+  border: 3px solid white;
 }
 
 #quote {
@@ -490,16 +516,16 @@ footer {
   }
   
   .project > img {
-    max-height: 173px;
+    height: 350px;
     border: 7px solid white;
   }
   
   .ribbon {
-    font-size: 7pt;
+    font-size: 10pt;
   }
   
   .projectTitle > h5 {
-    font-size: 10pt;
+    font-size: 15pt;
   }
   
   #articles > div {
@@ -609,16 +635,20 @@ footer {
   }
   
   .project > img {
-    max-height: 208px;
+    height: 450px;
     border: 10px solid white;
   }
   
   .ribbon {
-    font-size: 9pt;
+    font-size: 14pt;
   }
   
   .projectTitle {
     margin: 0.5em 0;
+  }
+  
+  .projectTitle > h5 {
+    font-size: 20pt;
   }
   
   #articles > div {
