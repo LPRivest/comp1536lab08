@@ -27,11 +27,15 @@ body * {
 }
 
 body {
-  background: url('https://m.media-amazon.com/images/G/01/IMDb/design/a/2018/ptp/00444678-ralph-breaks-the-internet-ca/main-wrap._V480430856_.jpg'), #013648;
-  background-size: 100% auto;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: url('https://img.clipartxtras.com/5a9dcd8fa9e85c2923ba5df3e23a4d7c_christmas-lights-clipart-transparent-pencil-and-in-color-christmas-light-clipart-transparent-background_8000-1375.png'), url('https://m.media-amazon.com/images/G/01/IMDb/design/a/2018/ptp/00444678-ralph-breaks-the-internet-ca/main-wrap._V480430856_.jpg'), #013648;
+  background-size: 200px auto, 100% auto;
+  background-position: 0 150px, top center;
+  background-repeat: repeat-x, no-repeat;
   margin: 0;
+  
+  /*url('https://vignette.wikia.nocookie.net/animaljam/images/4/44/Blue-christmas-snow-fall-animation.gif/revision/latest?cb=20160125034150'), #084a8c;
+  
+  url('http://www.alignthoughts.com/wp-content/uploads/2015/11/Snow-Background.png'), #001071;*/
 }
 
 /******************************************
@@ -122,6 +126,15 @@ header h2, #real_header h4 {
   font-size: 0pt;
 }
 
+@keyframes change_color {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #logo > img {
   font-size: 12pt;
   width: 174px;
@@ -131,6 +144,13 @@ header h2, #real_header h4 {
   padding: 0.5em;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+#logo > img:hover {
+  animation-name: change_color;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 #name {
@@ -160,11 +180,27 @@ header h2, #real_header h4 {
   font-weight: lighter;
 }
 
+@keyframes text_fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+
+#content > h1, #content > h2 {
+  color: rgba(255, 255, 255, 0.85);
+  //text-shadow: 0 0 0.5em red;  
+  animation-name: text_fade_in;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
 #content > h1 {
   text-align: center;
   font-size: 70pt;
   margin: 0.3em 0;
-  color: rgba(255, 255, 255, 0.85);
 }
 
 #and_title {
@@ -180,7 +216,6 @@ header h2, #real_header h4 {
   text-align: center;
   font-size: 40pt;
   margin: 0.6em 0 1em;
-  color: rgba(255, 255, 255, 0.85);
 }
 
 #features {
@@ -258,13 +293,28 @@ header h2, #real_header h4 {
   margin: 1em 3em;
 }
 
+@keyframes select_project {
+  from {
+    filter: none;
+  }
+  to {
+    filter: drop-shadow(0 0 0.5em white);
+  }
+}
+
 .project {
   position: relative;
   overflow: hidden;
   margin: 1.8em 9%;
-  color: #54e4f3;
+  color: rgba(255, 255, 255, 0.85);
   background: #031b33;
   border-radius: 10pt;
+}
+
+.project:hover {
+  animation-name: select_project;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .project > img {
@@ -278,7 +328,7 @@ header h2, #real_header h4 {
   list-style-image: url('../images/play.svg');
 }
 
-.project > p {
+/*.project > p {
   margin: 1em;
 }
 
@@ -290,8 +340,8 @@ header h2, #real_header h4 {
   border-radius: 0.5em;
   color: white;
   margin: 0.1em 0;
-  font-size: 10pt;
-}
+  font-size: 10px;
+}*/
 
 .ribbon {
   color: white;
@@ -344,10 +394,58 @@ header h2, #real_header h4 {
 }
 
 #articles > div {
-  margin: 4em 10%;
+  margin: 2em 10%;
 }
 
-#articles > div > div {
+#articles span {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  font-size: 15pt;
+  line-height: 42px;
+  border: 3px solid white;
+  background: #031b33;
+}
+
+#articles tr:first-child span {
+  color: #E4BB24
+}
+
+#articles tr:nth-of-type(2) span {
+  color: silver;
+}
+
+#articles tr:nth-of-type(3) span {
+  color: #CD7F32;
+}
+
+#articles table {
+  margin: 0.3em;
+  position: relative;
+  font-family: sans-serif;
+  table-layout: auto;
+  width: calc(100% - 0.5em);
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+
+#articles td {
+  padding: 0.25em;
+}
+
+#articles td:first-child {
+  text-align: center;
+  color: white;
+  width: 20%;
+}
+
+#articles td + td {
+  font-family: 'warsaw_gothicregular';
+  font-weight: lighter;font-size: 27pt;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/*#articles > div > div {
   margin: 2.6em 0;
 }
 
@@ -371,7 +469,7 @@ header h2, #real_header h4 {
   width: 70px;
   height: 70px;
   border: 3px solid white;
-}
+}*/
 
 #quote {
   margin: 3.7em 0;
@@ -403,11 +501,6 @@ header h2, #real_header h4 {
   text-align: right;
 }
 
-footer {
-  clear: both;
-  text-align: center;
-}
-
 /******************************************
  ************* MEDIA **********************
  ******************************************/
@@ -417,6 +510,10 @@ footer {
   /******************************************
    ************* HEADER *********************
    ******************************************/
+   
+  body {
+    background-position: 0 120px, top center;
+  }
   
   #back_bar {
     height: 145px;
@@ -517,7 +614,6 @@ footer {
   
   .project > img {
     height: 350px;
-    border: 7px solid white;
   }
   
   .ribbon {
@@ -539,6 +635,10 @@ footer {
   /******************************************
    ************* HEADER *********************
    ******************************************/
+   
+  body {
+    background-position: 0 150px, top center;
+  }
   
   #back_bar {
     height: 180px;
@@ -636,7 +736,6 @@ footer {
   
   .project > img {
     height: 450px;
-    border: 10px solid white;
   }
   
   .ribbon {
