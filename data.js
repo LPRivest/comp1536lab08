@@ -16,20 +16,35 @@ let grinchObj = {title: "Dr.Seuss' the Grinch", image: "http://www.stunmore.com/
 
 let movieBasicList = [ ralphObj, creedObj, beastsObj, robinObj, grinchObj ];
 
-// JSON list containing top 5 movies
-let topMovies = [ 'Green Book', 'Widows', 'Instant Family', 'Bohemian Rhapsody', 'A Star is Born' ]
+// Unordered list in HTML format containing top 10 movies
+let topMoviesHTML = '<ul><li>Ralph Breaks the Internet</li><li>Creed II</li><li>Fantastic Beasts: The Crimes of Grindelwald</li><li>Robin Hood</li><li>Dr.Seuss</li><li>Green Book</li><li>Widows</li><li>Instant Family</li><li>Bohemian Rhapsody</li><li>A Star is Born</li></ul>';
+
+// JSON list containing top 10 movies
+let topMoviesJSON = [ 'Ralph Breaks the Internet', 'Creed II', 'Fantastic Beasts: The Crimes of Grindelwald', 'Robin Hood', 'Dr.Seuss', 'Green Book', 'Widows', 'Instant Family', 'Bohemian Rhapsody', 'A Star is Born' ];
 
 module.exports = {
   getMovieDetail: function (id) {
-    return movieDetailList[id];
+    return getItem(id, movieDetailList);
   },
   getMovieBasic: function (id) {
-    return movieBasicList[id];
+    return getItem(id, movieBasicList);
   },
-  getTopMovies: function () {
-    return topMovies;
+  getTopMoviesHTML: function () {
+    return topMoviesHTML;
+  }
+  getTopMoviesJSON: function () {
+    return topMoviesJSON;
   }
 };
+
+function getItem(id, list) {
+  let temp = parseInt(id);
+  if (!isNaN(temp) && temp >= 0 && temp < list.length) {
+    return list[temp];
+  }
+  
+  return -1;
+}
 
 /*let bookMovie = '<ul><li>Director: Peter Farrelly</li><li>Length</li><li>Interesting!</li></ul>';
 let widowsMovie = '<ul><li>Director: Widows</li><li>Length: 2h9min</li><li>ESRB: R</li></ul>';

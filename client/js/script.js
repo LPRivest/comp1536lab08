@@ -1,6 +1,8 @@
 $(document).ready(function () {
   createMovie('Family', './images/tombraider.jpg', 'Tomb Raider', 5, '<ul><li>Length: 120m</li><li>Director: Sissy</li></ul>');
-  createTopMovies([ "abc", "abc", "abc", "abc", "abc" ]);
+  createTopMoviesJSON([ "abc", "abc", "abc", "abc", "abc" ]);
+  
+  $("#about_me").after('<ul><li>aasdf</li><li>asdf</li><li>asdf</li><li>asdf</li></ul>');
 });
 
 function createMovie(ribbon, img, name, rating, list, actors) {
@@ -25,7 +27,7 @@ function createMovie(ribbon, img, name, rating, list, actors) {
   $("#gallery > div").append(elm);
 }
 
-function createTopMovies(list) {
+function createTopMoviesJSON(list) {
   let elm = "<table> <tbody> ";
   
   for (let i = 0; i < list.length; i++) {

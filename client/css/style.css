@@ -22,6 +22,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'halogen_gas_lightsregular';
+  src: url('../fonts/halogen_gas_lights-webfont.eot');
+  src: url('../fonts/halogen_gas_lights-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/halogen_gas_lights-webfont.woff2') format('woff2'),
+       url('../fonts/halogen_gas_lights-webfont.woff') format('woff'),
+       url('../fonts/halogen_gas_lights-webfont.ttf') format('truetype'),
+       url('../fonts/halogen_gas_lights-webfont.svg#halogen_gas_lightsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body * {
   box-sizing: border-box;
 }
@@ -176,7 +188,7 @@ header h2, #real_header h4 {
 }
 
 #content h1, #content h2, #content h3, #content h4 {
-  font-family: 'warsaw_gothicregular';
+  font-family: 'halogen_gas_lightsregular';
   font-weight: lighter;
 }
 
@@ -190,8 +202,7 @@ header h2, #real_header h4 {
 }
 
 #content > h1, #content > h2 {
-  color: rgba(255, 255, 255, 0.85);
-  //text-shadow: 0 0 0.5em red;  
+  color: white;
   animation-name: text_fade_in;
   animation-duration: 4s;
   animation-fill-mode: forwards;
@@ -201,21 +212,23 @@ header h2, #real_header h4 {
   text-align: center;
   font-size: 70pt;
   margin: 0.3em 0;
+  text-shadow: 0 0 0.2em blue;
 }
 
-#and_title {
+/*#and_title {
   font-size: 40pt;
   vertical-align: 0.2em;
 }
 
 .spaceBreak {
   display: none;
-}
+}*/
 
 #content > h2 {
   text-align: center;
   font-size: 40pt;
   margin: 0.6em 0 1em;
+  text-shadow: 0 0 0.2em red;
 }
 
 #features {
@@ -472,6 +485,7 @@ header h2, #real_header h4 {
 }*/
 
 #quote {
+  font-family: sans-serif;
   margin: 3.7em 0;
   color: #B8B9BD;
 }
@@ -481,9 +495,17 @@ header h2, #real_header h4 {
   height: 30px;
 }
 
-#quote > p {
-  margin: 0.7em 0;
+#quote > ul {
+  list-style-type: square;
 }
+
+#quote > ul > li {
+  vertical-align: middle;
+}
+
+/*#quote > p {
+  margin: 0.7em 0;
+}*/
 
 #quote h6 {
   font-family: sans-serif;
