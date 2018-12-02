@@ -27,13 +27,13 @@ app.get('/movies/:id/details', function (req, res) {
 
 app.get('/top-movies', function (req, res) {
   let format = req.query.format;
-  
+
   if (format == 'html') {
     res.setHeader('Content-Type', 'text/html');
     res.send(myData.getTopMoviesHTML());
   } else if (format == 'json') {
     res.setHeader('Content-Type', 'application/json');
-    res.send(myData.getTopMoviesHTML());
+    res.send(myData.getTopMoviesJSON());
   } else {
     res.status(400).send('Wrong format!');
   }

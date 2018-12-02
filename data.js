@@ -8,11 +8,11 @@ let grinchMovie = "<ul><li>Director: Yarrow Cheney, Scott Mosier</li><li>Length:
 let movieDetailList = [ ralphMovie, creedMovie, beastsMovie, robinMovie, grinchMovie ];
 
 //list of JSON objects to return. Object describes a movie. Parameters include Title/Image/Rating/Genre(tag)
-let ralphObj = {title: "Ralph Breaks the Internet", image: "https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_UX182_CR0,0,182,268_AL_.jpg", rating: 3.9, tag: "Animation"};  
+let ralphObj = {title: "Ralph Breaks the Internet", image: "https://m.media-amazon.com/images/M/MV5BMTYyNzEyNDAzOV5BMl5BanBnXkFtZTgwNTk3NDczNjM@._V1_UX182_CR0,0,182,268_AL_.jpg", rating: 3, tag: "Animation"};  
 let creedObj = {title: "Creed II", image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Creed_II_poster.png/220px-Creed_II_poster.png", rating: 4, tag: "Drama"};
-let beastsObj = {title: "Fantastic Beasts: The Crimes of Grindelwald", image: "http://digitalspyuk.cdnds.net/18/39/480x711/gallery-1537826028-fantastic-beasts-2-gellert-grindelwald.jpg", rating: 3.5, tag: "Adventure"};
-let robinObj = {title: "Robin Hood", image: "https://cdn.traileraddict.com/content/lionsgate/robin-hood-2018-6.jpg", rating: 2.6, tag: "Action"};
-let grinchObj = {title: "Dr.Seuss' the Grinch", image: "http://www.stunmore.com/uploads/9/0/2/4/90246451/the-grinch-movie-poster-2018_orig.jpg", rating: 3.2, tag: "Family"};
+let beastsObj = {title: "Fantastic Beasts: The Crimes of Grindelwald", image: "http://digitalspyuk.cdnds.net/18/39/480x711/gallery-1537826028-fantastic-beasts-2-gellert-grindelwald.jpg", rating: 3, tag: "Adventure"};
+let robinObj = {title: "Robin Hood", image: "https://cdn.traileraddict.com/content/lionsgate/robin-hood-2018-6.jpg", rating: 2, tag: "Action"};
+let grinchObj = {title: "Dr.Seuss' the Grinch", image: "http://www.stunmore.com/uploads/9/0/2/4/90246451/the-grinch-movie-poster-2018_orig.jpg", rating: 3, tag: "Family"};
 
 let movieBasicList = [ ralphObj, creedObj, beastsObj, robinObj, grinchObj ];
 
@@ -31,7 +31,8 @@ module.exports = {
   },
   getTopMoviesHTML: function () {
     return topMoviesHTML;
-  }
+  },
+
   getTopMoviesJSON: function () {
     return topMoviesJSON;
   }

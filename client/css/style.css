@@ -297,6 +297,7 @@ header h2, #real_header h4 {
   display: inline-block;
   font-size: 14pt;
   width: 50%;
+  vertical-align: top;
 }
 
 .sectTitle {
@@ -337,7 +338,7 @@ header h2, #real_header h4 {
   border-bottom: 1px solid white;
 }
 
-.project > ul > li {
+.project ul > li {
   list-style-image: url('../images/play.svg');
 }
 
